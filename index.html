@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvie | Personal Portfolio & Creative Gallery</title>
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="scroll-progress"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Harvie<span class="logo-dot">.</span></a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Journey</a></li>
+                <li><a href="#work" class="nav-link">Creative Work</a></li>
+                <li><a href="#skills" class="nav-link">Interests</a></li>
+                <li><a href="#hobbies" class="nav-link">Adventures</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+        <div class="hero-orb hero-orb--3"></div>
+        <canvas class="hero-particles-canvas"></canvas>
+        <div class="hero-particles"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge reveal-text">Personal Portfolio</span>
+                <h1 class="split-text" data-split="words">Hi, I'm <span class="gradient-text">Harvie</span></h1>
+                <p class="hero-desc reveal-text" data-delay="0.2">A 21-year-old creative explorer based in Passi City, Iloilo. Exploring the intersections of electronic music production, street photography, and outdoor adventure.</p>
+                <div class="hero-buttons reveal-text" data-delay="0.3">
+                    <a href="#contact" class="btn btn-primary magnetic-btn">Let's Connect</a>
+                    <a href="#work" class="btn btn-outline magnetic-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        Explore Work
+                    </a>
+                </div>
+                <div class="hero-stats reveal-text" data-delay="0.4">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="120">0</span><span class="hero-stat-suffix">+</span>
+                        <span class="hero-stat-label">Tracks Produced</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="5">0</span><span class="hero-stat-suffix">k+</span>
+                        <span class="hero-stat-label">Photos Captured</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="3">0</span><span class="hero-stat-suffix">+</span>
+                        <span class="hero-stat-label">Climbing Years</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual reveal-scale" data-delay="0.2">
+                <div class="mockup mockup-front" data-tilt>
+                    <div class="mockup-camera"></div>
+                    <div class="mockup-screen">
+                        <div class="mockup-status">
+                            <span class="mockup-time">Studio Log</span>
+                            <div class="mockup-icons">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="mockup-header">
+                            <div class="mockup-avatar"></div>
+                            <div class="mockup-header-lines">
+                                <div class="mockup-line" style="width:60%"></div>
+                                <div class="mockup-line" style="width:40%"></div>
+                            </div>
+                        </div>
+                        <div class="mockup-card" style="background: linear-gradient(135deg, rgba(124, 92, 252, 0.3) 0%, rgba(0, 242, 254, 0.2) 100%)"></div>
+                        <div class="mockup-row">
+                            <div class="mockup-line" style="width:70%"></div>
+                            <div class="mockup-circle"></div>
+                        </div>
+                        <div class="mockup-row">
+                            <div class="mockup-line" style="width:50%"></div>
+                            <div class="mockup-circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-badge badge-1">Music</div>
+                <div class="floating-badge badge-2">Photos</div>
+                <div class="floating-badge badge-3">Climbs</div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-dot"></div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <span class="section-label reveal-text">About Me</span>
+                <h2 class="reveal-text" data-delay="0.1">Creative Explorer & Builder</h2>
+                <p class="reveal-text" data-delay="0.2">I'm Harvie, a 21-year-old creative explorer based in Passi City, Iloilo. I believe in living life at the intersection of structure and spontaneous expression. Whether shaping soundwaves in my home studio, capturing transient moments on the streets with my camera, or finding routes up rock walls, I approach every passion with dedication and care.</p>
+                <p class="reveal-text" data-delay="0.3">Through music, photography, and climbing, I seek to capture the textures of the world around us. This portfolio is a digital gallery of my creative work, journals, and adventures.</p>
+                <div class="about-stats reveal-text" data-delay="0.4">
+                    <div class="about-stat">
+                        <span class="about-stat-number">3+</span>
+                        <span class="about-stat-label">Years Producing</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-number">50+</span>
+                        <span class="about-stat-label">Photologs</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-number">4.9</span>
+                        <span class="about-stat-label">Gears Tuned</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual reveal-scale" data-delay="0.3">
+                <div class="about-block"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header reveal-text">
+                <span class="section-label">Creative Milestones</span>
+                <h2>My Personal Journey</h2>
+                <p>A timeline of the creative pursuits and disciplines that shape my perspective.</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item reveal-text" data-delay="0.1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Independent Music Producer</h3>
+                            <span class="timeline-company">Studio & Sound Design</span>
+                            <span class="timeline-duration">2021 - Present</span>
+                        </div>
+                        <p>Composed and mixed tracks for digital media. Experimented with synthesis and sound design, building an ambient and electronic sound catalog.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-text" data-delay="0.2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Street & Landscape Photographer</h3>
+                            <span class="timeline-company">Visual Storytelling</span>
+                            <span class="timeline-duration">2018 - 2021</span>
+                        </div>
+                        <p>Documented local life and landscapes. Focused on natural light composition and high-contrast styling to capture spontaneous human moments.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-text" data-delay="0.3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Adventure & Climbing Log</h3>
+                            <span class="timeline-company">Rock Climbing & Bouldering</span>
+                            <span class="timeline-duration">2016 - 2018</span>
+                        </div>
+                        <p>Began indoor and outdoor climbing. Translating movement, balance, and routing lessons from physical rock faces into daily creative problem-solving.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work">
+        <div class="container">
+            <div class="section-header reveal-text">
+                <span class="section-label">Creative Work</span>
+                <h2>Featured Creations</h2>
+                <p>A selection of my projects, ranging from ambient music EPs and street photography to climbing logs.</p>
+            </div>
+            <div class="work-carousel">
+                <div class="work-track">
+                    <div class="work-card">
+                        <div class="work-image image-reveal" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)">
+                            <div class="work-image-inner">
+                                <div class="work-image-content">
+                                    <div class="work-image-icon">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(124,92,252,0.4)" stroke-width="1"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                                    </div>
+                                </div>
+                                <div class="work-image-overlay">
+                                    <span>Listen Now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <span class="work-tag">Audio EP</span>
+                            <h3>Echoes of Panay</h3>
+                            <p>An ambient electronic EP blending digital synthesis with organic field recordings from the landscapes of Iloilo.</p>
+                            <div class="work-meta">
+                                <span>Sound Design</span>
+                                <span>Ableton</span>
+                                <span>Arrangement</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-image image-reveal" style="background: linear-gradient(135deg, #1e1a2e 0%, #3e1620 100%)">
+                            <div class="work-image-inner">
+                                <div class="work-image-content">
+                                    <div class="work-image-icon">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(124,92,252,0.4)" stroke-width="1"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                                    </div>
+                                </div>
+                                <div class="work-image-overlay">
+                                    <span>View Gallery</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <span class="work-tag">Photography</span>
+                            <h3>Passi City Lights</h3>
+                            <p>A street photography log capturing the contrasts of daily life, textures, and architecture under natural lights.</p>
+                            <div class="work-meta">
+                                <span>Leica</span>
+                                <span>Composition</span>
+                                <span>Lightroom</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-image image-reveal" style="background: linear-gradient(135deg, #1e1a3a 0%, #162a3e 100%)">
+                            <div class="work-image-inner">
+                                <div class="work-image-content">
+                                    <div class="work-image-icon">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(124,92,252,0.4)" stroke-width="1"><path d="M2 20h20M12 4l-8 12h16z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="work-image-overlay">
+                                    <span>Read Journals</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <span class="work-tag">Rock Climbing</span>
+                            <h3>Trad Climbs & Peaks</h3>
+                            <p>A logged collection of outdoor routes, mapping gear selections, route difficulty, and journals from local crags.</p>
+                            <div class="work-meta">
+                                <span>Lead Climbing</span>
+                                <span>Safety Knots</span>
+                                <span>Mapping</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-card">
+                        <div class="work-image image-reveal" style="background: linear-gradient(135deg, #1a2e1a 0%, #162e3e 100%)">
+                            <div class="work-image-inner">
+                                <div class="work-image-content">
+                                    <div class="work-image-icon">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(124,92,252,0.4)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+                                    </div>
+                                </div>
+                                <div class="work-image-overlay">
+                                    <span>Launch Pad</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-info">
+                            <span class="work-tag">Creative Tools</span>
+                            <h3>Audio Sampleboard</h3>
+                            <p>A custom soundboard interface built to play, map, and trigger audio samples instantly for live ambient mixing.</p>
+                            <div class="work-meta">
+                                <span>Web Audio</span>
+                                <span>JavaScript</span>
+                                <span>Audio Mix</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn carousel-prev" aria-label="Previous">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <div class="carousel-dots"></div>
+                    <button class="carousel-btn carousel-next" aria-label="Next">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header reveal-text">
+                <span class="section-label">Creative & Personal Toolkit</span>
+                <h2>My Disciplines</h2>
+                <p>Skills and creative tools that enable me to build, express, and solve.</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-column reveal-text" data-delay="0.1">
+                    <h3>Aesthetic & Audio</h3>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Ableton Live & Sound Design</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 0%" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Synthesis & Sequencing</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 0%" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Photographic Composition & Framing</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 0%" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Adobe Lightroom / Editing</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 0%" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-column reveal-text" data-delay="0.3">
+                    <h3>Climbing & Focus</h3>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Bouldering & Dynamic Movement</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 0%" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Trad & Lead Safety Procedures</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 0%" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Route Planning & Focus</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 0%" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span>Acoustic Physics & Tuning</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" style="width: 0%" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies" class="hobbies">
+        <div class="container">
+            <div class="section-header reveal-text">
+                <span class="section-label">Life Pursuits</span>
+                <h2>Adventures & Pursuits</h2>
+                <p>Off-crag activities and explorations that capture my interest and keep me creative.</p>
+            </div>
+            <div class="hobbies-grid stagger-children">
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7c5cfc" stroke-width="1.5"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="2" y1="14" x2="6" y2="14"/><line x1="10" y1="8" x2="14" y2="8"/><line x1="18" y1="16" x2="22" y2="16"/></svg>
+                    </div>
+                    <h3>Sound Gear Customizing</h3>
+                    <p>Modifying analog synthesizers, customizing audio interfaces, and soldering custom patches for optimal signal flow.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7c5cfc" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    </div>
+                    <h3>Street Snaps</h3>
+                    <p>Capturing local street visual essays, editing RAW files, and archiving high-contrast street moments.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7c5cfc" stroke-width="1.5"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+                    </div>
+                    <h3>Trail & Crag Mapping</h3>
+                    <p>Hiking and mapping out natural trails and boulder areas across Panay, maintaining a digital log of route approaches.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7c5cfc" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                    </div>
+                    <h3>Coffee Extraction</h3>
+                    <p>Studying the science of coffee extraction, tasting bean roasting profiles, and dialing in daily espresso extractions.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7c5cfc" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h3>Field Log Writing</h3>
+                    <p>Documenting acoustic sound studies, recording bouldering safety checklists, and listing route difficulty reviews.</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7c5cfc" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h3>Record Archiving</h3>
+                    <p>Collecting ambient and post-rock vinyl records, capturing field sample clips, and hosting late-night ambient sets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header reveal-text">
+                <span class="section-label">Get In Touch</span>
+                <h2>Let's Build Together</h2>
+                <p>Have an idea? Tell us about it and let's discuss how we can bring it to life.</p>
+            </div>
+            <div class="contact-wrapper">
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group floating-group">
+                            <input type="text" class="form-input" placeholder=" " required>
+                            <label class="form-label">Your Name</label>
+                            <span class="form-highlight"></span>
+                            <span class="form-error">Please enter your name</span>
+                        </div>
+                        <div class="form-group floating-group">
+                            <input type="email" class="form-input" placeholder=" " required>
+                            <label class="form-label">Your Email</label>
+                            <span class="form-highlight"></span>
+                            <span class="form-error">Please enter a valid email</span>
+                        </div>
+                    </div>
+                    <div class="form-group floating-group">
+                        <input type="text" class="form-input" placeholder=" ">
+                        <label class="form-label">Subject</label>
+                        <span class="form-highlight"></span>
+                    </div>
+                    <div class="form-group floating-group">
+                        <textarea class="form-input" placeholder=" " rows="5" required></textarea>
+                        <label class="form-label">Tell us about your project...</label>
+                        <span class="form-highlight"></span>
+                        <span class="form-error">Please describe your project</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit magnetic-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </span>
+                        <span class="btn-loading">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-dasharray="31.4 31.4" stroke-linecap="round"><animate attributeName="stroke-dashoffset" values="0;-62.8" dur="1s" repeatCount="indefinite"/></svg>
+                        </span>
+                    </button>
+                </form>
+                <div class="contact-info reveal-text" data-delay="0.2">
+                    <div class="contact-info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c5cfc" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <div>
+                            <strong>Location</strong>
+                            <span>Passi City, Iloilo</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c5cfc" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <div>
+                            <strong>Email</strong>
+                            <span>hello@harvie.dev</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c5cfc" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        <div>
+                            <strong>Phone</strong>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">Harvie<span class="logo-dot">.</span></a>
+                <p>Full-Stack App Developer crafting digital experiences that matter.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link" aria-label="Twitter">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+                </a>
+                <a href="#" class="footer-link" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" class="footer-link" aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 00 20 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                </a>
+                <a href="#" class="footer-link" aria-label="Dribbble">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Harvie. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
